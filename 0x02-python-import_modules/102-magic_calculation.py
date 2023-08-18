@@ -2,6 +2,6 @@
 
 def magic_calculation(a, b):
     if a < b:
-    from magic_calculation_102 import add
+    add = __import__('magic_calculation_102').add
     return add(a, b)
-    return sub(a, b)
+    return __import__('magic_calculation_102').sub(a, b)
