@@ -11,4 +11,4 @@ def safe_print_list(my_list=[], x=0):
         pass
 
     print()  # Add a newline after printing
-    return printed_count
+    return (printed_count)
