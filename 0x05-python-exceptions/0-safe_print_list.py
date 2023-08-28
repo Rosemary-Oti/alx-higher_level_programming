@@ -10,5 +10,5 @@ def safe_print_list(my_list=[], x=0):
     except IndexError:
         pass
 
-    print()  # Add a newline after printing
+    print("")  # Add a newline after printing
     return (printed_count)
