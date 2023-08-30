@@ -72,15 +72,3 @@ class Square:
     def __str__(self):
         """String representation of the Square instance."""
         return self.my_print()
-
-# Example usage:
-if __name__ == "__main__":
-    my_square = Square(4, (2, 1))
-    print(my_square)
-
-    my_square.size = 5
-    print(my_square)
-
-    my_square.position = (1, 2)
-    print(my_square)
-
