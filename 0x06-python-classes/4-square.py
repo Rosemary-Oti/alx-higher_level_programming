@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Define a class Square."""
 
 class Square:
     """Represents a square."""
@@ -14,7 +15,7 @@ class Square:
     @property
     def size(self):
         """Getter for the size attribute."""
-        return self.__size
+        return (self.__size)
 
     @size.setter
     def size(self, value):
@@ -39,5 +40,4 @@ class Square:
         Returns:
             int: The area of the square.
         """
-        return self.__size ** 2
-
+        return (self.__size * self.__size)
