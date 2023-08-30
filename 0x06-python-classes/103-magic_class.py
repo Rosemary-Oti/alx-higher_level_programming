@@ -1,38 +1,70 @@
 #!/usr/bin/python3
-"""Define a MagicClass matching exactly a bytecode provided."""
+"""Define a MagicClass matching exactly a bytecode provided"""
 
-import math
-
-class MagicClass:
-    """Represent a circle."""
-
-    def __init__(self, radius=0):
-        """Constructor for MagicClass.
+class Square:
+    def __init__(self, size=0, position=(0, 0)):
+        """Initialize a new Square instance.
 
         Args:
-            radius (int or float): The radius of the circle (default is 0).
+            size (int, optional): The size of the square. Default is 0.
+            position (tuple, optional): The position of the square. Default is (0, 0).
+        """
+        self.size = size
+        self.position = position
+
+    @property
+    def size(self):
+        """Getter for the size attribute."""
+        return self.__size
+
+    @size.setter
+    def size(self, value):
+        """Setter for the size attribute.
+
+        Args:
+            value (int): The new size value.
 
         Raises:
-            TypeError: If radius is not a number (int or float).
+            TypeError: If value is not an integer.
+            ValueError: If value is less than 0.
         """
-        if type(radius) is not int and type(radius) is not float:
-            raise TypeError('radius must be a number')
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = value
 
-        self.__radius = float(radius)
+    @property
+    def position(self):
+        """Getter for the position attribute."""
+        return self.__position
+
+    @position.setter
+    def position(self, value):
+        """Setter for the position attribute.
+
+        Args:
+            value (tuple): The new position value, which must be a tuple of 2 positive integers.
+
+        Raises:
+            TypeError: If value is not a tuple of 2 positive integers.
+        """
+        if not isinstance(value, tuple) or len(value) != 2 or not all(isinstance(x, int) for x in value) or value[0] < 0 or value[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        self.__position = value
 
     def area(self):
-        """Calculate and return the area of the circle.
+        """Calculates and returns the area of the square."""
+        return self.__size ** 2
 
-        Returns:
-            float: The area of the circle.
-        """
-        return (self.__radius ** 2 * math.pi)
+    def my_print(self):
+        """Prints the square with the specified position using '#' characters."""
+        if self.__size == 0:
+            print()
+            return
+        for i in range(self.__position[1]):
+            print()
+        for i in range(self.__size):
+            print(" " * self.__position[0] + "#" * self.__size)
 
-    def circumference(self):
-        """Calculate and return the circumference of the circle.
-
-        Returns:
-            float: The circumference of the circle.
-        """
-        return (2 * math.pi * self.__radius)
 
