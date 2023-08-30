@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Define a class Square."""
 
 class Square:
     """Represents a square."""
@@ -9,7 +10,6 @@ class Square:
         Args:
             size (int, optional): The size of the square. Default is 0.
         """
-
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
 
