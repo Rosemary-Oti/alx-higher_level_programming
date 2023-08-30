@@ -4,7 +4,7 @@
 import math
 
 class MagicClass:
- """Represent a circle."""
+    """Represent a circle."""
 
     def __init__(self, radius=0):
         """Constructor for MagicClass.
@@ -35,3 +35,4 @@ class MagicClass:
             float: The circumference of the circle.
         """
         return (2 * math.pi * self.__radius)
+
