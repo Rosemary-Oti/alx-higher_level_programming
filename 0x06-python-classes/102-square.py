@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Define a class Square."""
 
+
 class Square:
     """Represents a square."""
 
@@ -8,7 +9,8 @@ class Square:
         """Initializes a new Square instance.
 
         Args:
-            size (float or int, optional): The size of the square. Default is 0.
+            size (float or int, optional): The size of the square.
+            Default is 0.
         """
         self.size = size
 
@@ -71,4 +73,3 @@ class Square:
     def __str__(self):
         """String representation of the Square instance."""
         return "Square({})".format(self.__size)
-
