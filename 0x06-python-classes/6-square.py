@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Define a class Square."""
 
+
 class Square:
     """Represents a square."""
 
@@ -9,7 +10,8 @@ class Square:
 
         Args:
             size (int, optional): The size of the square. Default is 0.
-            position (tuple, optional): The position of the square. Default is (0, 0).
+            position (tuple, optional): The position of the square.
+            Default is (0, 0).
         """
         self.size = size
         self.position = position
@@ -65,7 +67,8 @@ class Square:
         return self.__size ** 2
 
     def my_print(self):
-        """Prints the square using '#' characters with the specified position."""
+        """Prints the square using '#' characters
+        with the specified position."""
         if self.__size == 0:
             print()
         else:
@@ -73,4 +76,3 @@ class Square:
                 print()
             for _ in range(self.__size):
                 print(" " * self.__position[0] + "#" * self.__size)
-
