@@ -1,13 +1,15 @@
 #!/usr/bin/python3
 """Define a MagicClass matching exactly a bytecode provided"""
 
+
 class Square:
     def __init__(self, size=0, position=(0, 0)):
         """Initialize a new Square instance.
 
         Args:
             size (int, optional): The size of the square. Default is 0.
-            position (tuple, optional): The position of the square. Default is (0, 0).
+            position (tuple, optional): The position of the square.
+            Default is (0, 0).
         """
         self.size = size
         self.position = position
@@ -44,12 +46,14 @@ class Square:
         """Setter for the position attribute.
 
         Args:
-            value (tuple): The new position value, which must be a tuple of 2 positive integers.
+            value (tuple): The new position value, which must be a
+            tuple of 2 positive integers.
 
         Raises:
             TypeError: If value is not a tuple of 2 positive integers.
         """
-        if not isinstance(value, tuple) or len(value) != 2 or not all(isinstance(x, int) for x in value) or value[0] < 0 or value[1] < 0:
+        if not isinstance(value, tuple) or len(value) != 2 or not
+        all(isinstance(x, int) for x in value) or value[0] < 0 or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
@@ -58,7 +62,8 @@ class Square:
         return self.__size ** 2
 
     def my_print(self):
-        """Prints the square with the specified position using '#' characters."""
+        """Prints the square with the specified position
+        using '#' characters."""
         if self.__size == 0:
             print()
             return
@@ -66,5 +71,3 @@ class Square:
             print()
         for i in range(self.__size):
             print(" " * self.__position[0] + "#" * self.__size)
-
-
