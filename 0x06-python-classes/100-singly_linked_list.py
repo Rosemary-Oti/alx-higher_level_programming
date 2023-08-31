@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Define classes for a singly-linked list."""
 
+
 class Node:
     """Represents a node of a singly linked list."""
 
@@ -9,7 +10,8 @@ class Node:
 
         Args:
             data (int): The integer value to store in the node.
-            next_node (Node, optional): The next node in the linked list. Default is None.
+            next_node (Node, optional): The next node in the linked list.
+            Default is None.
         """
         self.data = data
         self.next_node = next_node
@@ -43,7 +45,8 @@ class Node:
         """Setter for the next_node attribute.
 
         Args:
-            value (Node): The new next_node value, which must be a Node object or None.
+            value (Node): The new next_node value, which must be a
+            Node object or None.
 
         Raises:
             TypeError: If value is not a Node object or None.
@@ -61,7 +64,8 @@ class SinglyLinkedList:
         self.head = None
 
     def sorted_insert(self, value):
-        """Inserts a new Node into the correct sorted position in the list (increasing order).
+        """Inserts a new Node into the correct sorted position
+        in the list (increasing order).
 
         Args:
             value (int): The integer value to insert.
@@ -92,4 +96,3 @@ class SinglyLinkedList:
             result += str(current.data) + "\n"
             current = current.next_node
         return result.strip()
-
